@@ -1,6 +1,6 @@
 const header = document.querySelector('.header');
 const hero = document.querySelector('.hero');
-const revealItems = document.querySelectorAll('.reveal');
+const revealItems = Array.from(document.querySelectorAll('.reveal'));
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 const progressBar = document.querySelector('.scroll-progress');
@@ -29,10 +29,13 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.12 }
+  { threshold: 0.18, rootMargin: '0px 0px -60px 0px' }
 );
 
-revealItems.forEach((item) => observer.observe(item));
+revealItems.forEach((item, index) => {
+  item.style.setProperty('--delay', `${Math.min(index * 0.08, 0.4)}s`);
+  observer.observe(item);
+});
 
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {

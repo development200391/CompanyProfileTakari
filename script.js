@@ -41,13 +41,28 @@ revealItems.forEach((item, index) => {
 
 if (menuToggle && mobileMenu) {
   menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
+    const isActive = mobileMenu.classList.toggle('active');
+    menuToggle.setAttribute('aria-expanded', String(isActive));
   });
 
   mobileMenu.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => mobileMenu.classList.remove('active'));
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
   });
 }
+
+const faqItems = Array.from(document.querySelectorAll('.faq-item'));
+faqItems.forEach((item) => {
+  item.addEventListener('toggle', () => {
+    if (item.open) {
+      faqItems.forEach((other) => {
+        if (other !== item) other.open = false;
+      });
+    }
+  });
+});
 
 if (backToTop) {
   backToTop.addEventListener('click', (event) => {

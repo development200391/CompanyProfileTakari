@@ -433,7 +433,9 @@ a {
 
 .achievement-grid,
 .testimonial-grid,
-.project-grid {
+.project-grid,
+.mission-grid,
+.partner-grid {
   display: grid;
   gap: 1.25rem;
 }
@@ -444,7 +446,8 @@ a {
 
 .achievement-card,
 .testimonial-card,
-.project-card {
+.project-card,
+.mission-card {
   padding: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -465,6 +468,24 @@ a {
 
 .project-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mission-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.partner-pill {
+  padding: 0.9rem 1.1rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  color: var(--muted);
 }
 
 .project-icon {
@@ -622,7 +643,8 @@ a {
   .approach-grid,
   .achievement-grid,
   .testimonial-grid,
-  .project-grid {
+  .project-grid,
+  .mission-grid {
     grid-template-columns: 1fr;
   }
 

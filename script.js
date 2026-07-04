@@ -78,6 +78,11 @@ window.addEventListener('scroll', () => {
     heroContent.style.opacity = `${Math.max(0.3, 1 - scrollTop / 700)}`;
   }
 
+  const heroOverlay = document.querySelector('.hero-overlay');
+  if (heroOverlay) {
+    heroOverlay.style.transform = `translate3d(${scrollTop * 0.01}%, ${scrollTop * 0.02}%, 0)`;
+  }
+
   sections.forEach((section, index) => {
     const rect = section.getBoundingClientRect();
     if (rect.top < window.innerHeight * 0.8) {

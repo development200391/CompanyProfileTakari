@@ -177,12 +177,17 @@ a {
   isolation: isolate;
   box-shadow: inset 0 -80px 120px rgba(0, 0, 0, 0.25);
   transform-style: preserve-3d;
+  animation: driftBackground 18s ease-in-out infinite alternate;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top right, rgba(76, 201, 240, 0.22), transparent 35%);
+  background:
+    radial-gradient(circle at top right, rgba(76, 201, 240, 0.22), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.16), transparent 30%);
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.2s ease-out;
 }
 
 .hero-content {
@@ -221,6 +226,8 @@ a {
   opacity: 0.4;
   pointer-events: none;
   animation: floatGlow 8s ease-in-out infinite alternate;
+  transform: translate3d(0, 0, 0);
+  will-change: transform, opacity;
 }
 
 .glow-one {
@@ -696,10 +703,22 @@ a {
 
 @keyframes floatGlow {
   from {
-    transform: translateY(0px) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
   }
   to {
-    transform: translateY(-18px) scale(1.05);
+    transform: translate3d(0, -18px, 0) scale(1.05);
+  }
+}
+
+@keyframes driftBackground {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, -4%, 0) scale(1.03);
+  }
+  100% {
+    transform: translate3d(-4%, 5%, 0) scale(1.01);
   }
 }
 

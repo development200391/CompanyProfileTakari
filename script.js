@@ -3,6 +3,8 @@ const hero = document.querySelector('.hero');
 const revealItems = document.querySelectorAll('.reveal');
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
+const progressBar = document.querySelector('.scroll-progress');
+const backToTop = document.querySelector('.back-to-top');
 
 const toggleHeader = () => {
   if (window.scrollY > 40) {
@@ -45,6 +47,18 @@ if (menuToggle && mobileMenu) {
 window.addEventListener('scroll', () => {
   toggleHeader();
   parallaxHero();
+
+  const scrollTop = window.scrollY;
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = height > 0 ? (scrollTop / height) * 100 : 0;
+
+  if (progressBar) {
+    progressBar.style.width = `${progress}%`;
+  }
+
+  if (backToTop) {
+    backToTop.classList.toggle('visible', scrollTop > 600);
+  }
 });
 window.addEventListener('load', () => {
   toggleHeader();

@@ -1,11 +1,11 @@
 :root {
-  --bg: #050b16;
-  --bg-soft: #0d1727;
-  --surface: rgba(255, 255, 255, 0.06);
-  --surface-strong: #13253f;
-  --text: #f6f8fc;
-  --muted: #a4b4cb;
-  --accent: #4cc9f0;
+  --bg: #030712;
+  --bg-soft: #0b1322;
+  --surface: rgba(255, 255, 255, 0.055);
+  --surface-strong: #101b2d;
+  --text: #f8fafc;
+  --muted: #9aa8bc;
+  --accent: #5ee7ff;
   --accent-2: #3b82f6;
   --border: rgba(255, 255, 255, 0.12);
 }
@@ -23,10 +23,11 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(76, 201, 240, 0.12), transparent 25%),
+    radial-gradient(circle at top left, rgba(94, 231, 255, 0.12), transparent 21%),
     linear-gradient(135deg, var(--bg), var(--bg-soft));
   color: var(--text);
   line-height: 1.7;
+  letter-spacing: 0.01em;
 }
 
 img,
@@ -116,10 +117,11 @@ a {
   place-items: center;
   width: 2rem;
   height: 2rem;
-  border-radius: 0.6rem;
+  border-radius: 0.65rem;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
   color: white;
   font-weight: 800;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.22);
 }
 
 .nav-links {
@@ -190,13 +192,13 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.55rem 0.9rem;
-  border: 1px solid rgba(255,255,255,0.18);
+  padding: 0.55rem 0.95rem;
+  border: 1px solid rgba(255,255,255,0.16);
   border-radius: 999px;
   background: rgba(255,255,255,0.06);
   color: #dbeafe;
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   margin-bottom: 1rem;
   backdrop-filter: blur(8px);

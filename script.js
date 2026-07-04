@@ -44,6 +44,13 @@ if (menuToggle && mobileMenu) {
   });
 }
 
+if (backToTop) {
+  backToTop.addEventListener('click', (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
 window.addEventListener('scroll', () => {
   toggleHeader();
   parallaxHero();

@@ -133,6 +133,7 @@ a {
     linear-gradient(120deg, rgba(7, 17, 31, 0.95), rgba(18, 35, 61, 0.78)),
     url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80') center/cover;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .hero-overlay {
@@ -227,7 +228,7 @@ a {
   padding: 0.95rem 1.4rem;
   border-radius: 999px;
   font-weight: 600;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .btn:hover {
@@ -290,7 +291,10 @@ a {
 .feature-card,
 .timeline,
 .map-card,
-.cta-banner {
+.cta-banner,
+.achievement-card,
+.testimonial-card,
+.project-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
@@ -437,6 +441,7 @@ a {
 .footer {
   padding: 2rem 0 3rem;
   border-top: 1px solid var(--border);
+  background: rgba(255,255,255,0.025);
 }
 
 .footer-content {
@@ -448,13 +453,13 @@ a {
 
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(28px) scale(0.98);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 @keyframes floatGlow {

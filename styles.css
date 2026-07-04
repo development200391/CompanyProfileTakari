@@ -322,7 +322,7 @@ a {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 6.2rem 0;
   position: relative;
 }
 
@@ -391,6 +391,7 @@ a {
   background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
   border: 1px solid var(--border);
   border-radius: 1.15rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .approach-card h3 {
@@ -405,6 +406,16 @@ a {
 
 .feature-card {
   padding: 1.5rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.feature-card:hover,
+.approach-card:hover,
+.project-card:hover,
+.achievement-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(94, 231, 255, 0.35);
 }
 
 .feature-number {

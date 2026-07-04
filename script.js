@@ -1,6 +1,8 @@
 const header = document.querySelector('.header');
 const hero = document.querySelector('.hero');
 const revealItems = Array.from(document.querySelectorAll('.reveal'));
+const sections = Array.from(document.querySelectorAll('.section'));
+const heroContent = document.querySelector('.hero-content');
 const menuToggle = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('.mobile-menu');
 const progressBar = document.querySelector('.scroll-progress');
@@ -69,8 +71,25 @@ window.addEventListener('scroll', () => {
   if (backToTop) {
     backToTop.classList.toggle('visible', scrollTop > 600);
   }
+
+  if (heroContent) {
+    const heroShift = Math.max(0, scrollTop * 0.08);
+    heroContent.style.transform = `translateY(${heroShift}px)`;
+    heroContent.style.opacity = `${Math.max(0.3, 1 - scrollTop / 700)}`;
+  }
+
+  sections.forEach((section, index) => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.8) {
+      section.classList.add('visible-section');
+    }
+    if (rect.top > window.innerHeight * 0.95 && section.classList.contains('visible-section')) {
+      section.classList.remove('visible-section');
+    }
+  });
 });
 window.addEventListener('load', () => {
   toggleHeader();
   parallaxHero();
+  window.dispatchEvent(new Event('scroll'));
 });

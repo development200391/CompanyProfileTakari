@@ -69,13 +69,14 @@
     </script>
   </head>
   <body id="top">
-    <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+    <a href="#main-content" class="skip-link" data-i18n="skip_link">Lewati ke konten utama</a>
     <div class="scroll-progress" aria-hidden="true"></div>
     <a
       href="https://wa.me/62895418465500?text=Halo%2C%20saya%20ingin%20bertanya%20mengenai%20layanan%20leasing%20PT.%20Takari%20Kokoh%20Sejahtera."
       class="whatsapp-float"
       target="_blank"
       rel="noopener noreferrer"
+      data-i18n-aria="whatsapp_aria"
       aria-label="Hubungi kami via WhatsApp"
     >
       <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
@@ -85,7 +86,7 @@
         />
       </svg>
     </a>
-    <a href="#top" class="back-to-top" aria-label="Kembali ke atas">↑</a>
+    <a href="#top" class="back-to-top" data-i18n-aria="back_to_top_aria" aria-label="Kembali ke atas">↑</a>
 
     <header class="header">
       <nav class="navbar container">
@@ -94,24 +95,40 @@
           <span>TAKARI</span>
         </a>
         <div class="nav-links">
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#services" data-i18n="nav_services">Services</a>
+          <a href="#solutions" data-i18n="nav_solutions">Solutions</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
+          <a href="#contact" data-i18n="nav_contact">Contact</a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
+        <div class="lang-switch" role="group" data-i18n-aria="lang_switch_aria" aria-label="Select language">
+          <button type="button" class="lang-btn" data-lang="id">ID</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="ja">JA</button>
+        </div>
+        <button
+          class="menu-toggle"
+          data-i18n-aria="menu_toggle_aria"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
       </nav>
       <div class="mobile-menu" id="mobile-menu">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#solutions">Solutions</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#solutions" data-i18n="nav_solutions">Solutions</a>
+        <a href="#faq" data-i18n="nav_faq">FAQ</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+        <div class="lang-switch lang-switch-mobile" role="group" data-i18n-aria="lang_switch_aria" aria-label="Select language">
+          <button type="button" class="lang-btn" data-lang="id">ID</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="ja">JA</button>
+        </div>
       </div>
     </header>
 
@@ -121,31 +138,31 @@
         <div class="hero-glow glow-one" aria-hidden="true"></div>
         <div class="hero-glow glow-two" aria-hidden="true"></div>
         <div class="container hero-content reveal">
-          <p class="eyebrow">Corporate Vehicle Leasing & Financing • Jakarta</p>
-          <div class="hero-badge">Trusted Leasing Partner</div>
-          <h1>Solusi leasing dan pembiayaan armada kendaraan yang kokoh untuk bisnis Anda.</h1>
-          <p class="hero-text">
+          <p class="eyebrow" data-i18n="hero_eyebrow">Corporate Vehicle Leasing & Financing • Jakarta</p>
+          <div class="hero-badge" data-i18n="hero_badge">Trusted Leasing Partner</div>
+          <h1 data-i18n="hero_h1">Solusi leasing dan pembiayaan armada kendaraan yang kokoh untuk bisnis Anda.</h1>
+          <p class="hero-text" data-i18n="hero_text">
             PT. Takari Kokoh Sejahtera menghadirkan layanan operating lease dan pembiayaan
             kendaraan operasional bagi perusahaan, dengan skema yang fleksibel, transparan,
             dan didukung layanan purna jual yang responsif.
           </p>
           <div class="hero-actions">
-            <a href="#services" class="btn btn-primary">Ajukan Leasing</a>
-            <a href="#contact" class="btn btn-secondary">Konsultasi Kebutuhan Armada</a>
+            <a href="#services" class="btn btn-primary" data-i18n="hero_cta_primary">Ajukan Leasing</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero_cta_secondary">Konsultasi Kebutuhan Armada</a>
           </div>
 
           <div class="hero-stats">
             <div class="stat-box">
-              <strong>Flexible Tenor</strong>
-              <span>Skema pembiayaan disesuaikan kebutuhan bisnis</span>
+              <strong data-i18n="hero_stat1_title">Flexible Tenor</strong>
+              <span data-i18n="hero_stat1_text">Skema pembiayaan disesuaikan kebutuhan bisnis</span>
             </div>
             <div class="stat-box">
-              <strong>Full Maintenance</strong>
-              <span>Dukungan perawatan armada yang terintegrasi</span>
+              <strong data-i18n="hero_stat2_title">Full Maintenance</strong>
+              <span data-i18n="hero_stat2_text">Dukungan perawatan armada yang terintegrasi</span>
             </div>
             <div class="stat-box">
-              <strong>Responsive Support</strong>
-              <span>Tim yang siap membantu kebutuhan armada Anda</span>
+              <strong data-i18n="hero_stat3_title">Responsive Support</strong>
+              <span data-i18n="hero_stat3_text">Tim yang siap membantu kebutuhan armada Anda</span>
             </div>
           </div>
         </div>
@@ -154,9 +171,9 @@
       <section id="about" class="section">
         <div class="container intro-grid">
           <div class="section-copy reveal">
-            <p class="section-label">About Us</p>
-            <h2>Mitra strategis leasing dan pembiayaan armada kendaraan bagi perusahaan Anda.</h2>
-            <p>
+            <p class="section-label" data-i18n="about_label">About Us</p>
+            <h2 data-i18n="about_h2">Mitra strategis leasing dan pembiayaan armada kendaraan bagi perusahaan Anda.</h2>
+            <p data-i18n="about_p">
               PT. Takari Kokoh Sejahtera bergerak di bidang jasa pembiayaan (leasing) dan
               operating lease kendaraan operasional untuk kebutuhan korporasi. Kami membantu
               perusahaan mengelola aset armada secara efisien melalui skema pembiayaan yang
@@ -164,12 +181,12 @@
             </p>
           </div>
           <div class="about-card reveal">
-            <h3>Why Choose Us</h3>
+            <h3 data-i18n="about_card_title">Why Choose Us</h3>
             <ul>
-              <li>Skema operating lease & pembiayaan yang fleksibel</li>
-              <li>Proses pengajuan cepat dengan persetujuan yang jelas</li>
-              <li>Dukungan maintenance dan penggantian armada</li>
-              <li>Tim yang responsif untuk kebutuhan korporasi</li>
+              <li data-i18n="about_li1">Skema operating lease & pembiayaan yang fleksibel</li>
+              <li data-i18n="about_li2">Proses pengajuan cepat dengan persetujuan yang jelas</li>
+              <li data-i18n="about_li3">Dukungan maintenance dan penggantian armada</li>
+              <li data-i18n="about_li4">Tim yang responsif untuk kebutuhan korporasi</li>
             </ul>
           </div>
         </div>
@@ -178,21 +195,21 @@
       <section class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Our Process</p>
-            <h2>Proses leasing dan pembiayaan yang jelas, cepat, dan didukung hingga purna jual.</h2>
+            <p class="section-label" data-i18n="process_label">Our Process</p>
+            <h2 data-i18n="process_h2">Proses leasing dan pembiayaan yang jelas, cepat, dan didukung hingga purna jual.</h2>
           </div>
           <div class="approach-grid">
             <article class="approach-card reveal">
-              <h3>01. Konsultasi</h3>
-              <p>Memahami kebutuhan armada dan menentukan skema pembiayaan yang paling sesuai untuk bisnis Anda.</p>
+              <h3 data-i18n="process1_title">01. Konsultasi</h3>
+              <p data-i18n="process1_text">Memahami kebutuhan armada dan menentukan skema pembiayaan yang paling sesuai untuk bisnis Anda.</p>
             </article>
             <article class="approach-card reveal">
-              <h3>02. Pengajuan & Persetujuan</h3>
-              <p>Proses pengajuan yang efisien dengan evaluasi kelayakan yang transparan dan cepat.</p>
+              <h3 data-i18n="process2_title">02. Pengajuan & Persetujuan</h3>
+              <p data-i18n="process2_text">Proses pengajuan yang efisien dengan evaluasi kelayakan yang transparan dan cepat.</p>
             </article>
             <article class="approach-card reveal">
-              <h3>03. Serah Terima & Dukungan</h3>
-              <p>Penyerahan unit kendaraan disertai dukungan maintenance dan purna jual yang berkelanjutan.</p>
+              <h3 data-i18n="process3_title">03. Serah Terima & Dukungan</h3>
+              <p data-i18n="process3_text">Penyerahan unit kendaraan disertai dukungan maintenance dan purna jual yang berkelanjutan.</p>
             </article>
           </div>
         </div>
@@ -201,24 +218,24 @@
       <section id="services" class="section section-alt">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Services</p>
-            <h2>Solusi leasing dan pembiayaan armada yang dirancang untuk kebutuhan operasional bisnis Anda.</h2>
+            <p class="section-label" data-i18n="services_label">Services</p>
+            <h2 data-i18n="services_h2">Solusi leasing dan pembiayaan armada yang dirancang untuk kebutuhan operasional bisnis Anda.</h2>
           </div>
           <div class="grid cards">
             <article class="feature-card reveal">
               <div class="feature-number">01</div>
-              <h3>Operating Lease</h3>
-              <p>Sewa kendaraan operasional jangka panjang tanpa beban kepemilikan aset, termasuk perawatan rutin.</p>
+              <h3 data-i18n="service1_title">Operating Lease</h3>
+              <p data-i18n="service1_text">Sewa kendaraan operasional jangka panjang tanpa beban kepemilikan aset, termasuk perawatan rutin.</p>
             </article>
             <article class="feature-card reveal">
               <div class="feature-number">02</div>
-              <h3>Corporate Vehicle Financing</h3>
-              <p>Pembiayaan pembelian kendaraan dinas/operasional dengan tenor dan skema angsuran yang fleksibel.</p>
+              <h3 data-i18n="service2_title">Corporate Vehicle Financing</h3>
+              <p data-i18n="service2_text">Pembiayaan pembelian kendaraan dinas/operasional dengan tenor dan skema angsuran yang fleksibel.</p>
             </article>
             <article class="feature-card reveal">
               <div class="feature-number">03</div>
-              <h3>Fleet Management Support</h3>
-              <p>Dukungan pengelolaan armada mencakup maintenance, monitoring, dan peremajaan kendaraan.</p>
+              <h3 data-i18n="service3_title">Fleet Management Support</h3>
+              <p data-i18n="service3_text">Dukungan pengelolaan armada mencakup maintenance, monitoring, dan peremajaan kendaraan.</p>
             </article>
           </div>
         </div>
@@ -227,9 +244,9 @@
       <section id="values" class="section">
         <div class="container split-layout">
           <div class="section-copy reveal">
-            <p class="section-label">Our Values</p>
-            <h2>Nilai yang menjadi fondasi setiap skema leasing dan pembiayaan kami.</h2>
-            <p>
+            <p class="section-label" data-i18n="values_label">Our Values</p>
+            <h2 data-i18n="values_h2">Nilai yang menjadi fondasi setiap skema leasing dan pembiayaan kami.</h2>
+            <p data-i18n="values_p">
               Kepercayaan, transparansi, dan komitmen menjadi dasar yang kami jaga dalam setiap
               transaksi pembiayaan, setiap proses kerja, dan setiap hubungan yang kami bangun
               bersama klien korporat secara berkelanjutan.
@@ -237,16 +254,16 @@
           </div>
           <div class="timeline reveal">
             <div class="timeline-item">
-              <h3>Integrity</h3>
-              <p>Menjalankan setiap transaksi leasing dan pembiayaan dengan transparan dan jujur.</p>
+              <h3 data-i18n="value1_title">Integrity</h3>
+              <p data-i18n="value1_text">Menjalankan setiap transaksi leasing dan pembiayaan dengan transparan dan jujur.</p>
             </div>
             <div class="timeline-item">
-              <h3>Reliability</h3>
-              <p>Menjaga komitmen atas setiap skema tenor dan pembiayaan yang telah disepakati.</p>
+              <h3 data-i18n="value2_title">Reliability</h3>
+              <p data-i18n="value2_text">Menjaga komitmen atas setiap skema tenor dan pembiayaan yang telah disepakati.</p>
             </div>
             <div class="timeline-item">
-              <h3>Excellence</h3>
-              <p>Terus meningkatkan kualitas layanan demi produktivitas armada klien.</p>
+              <h3 data-i18n="value3_title">Excellence</h3>
+              <p data-i18n="value3_text">Terus meningkatkan kualitas layanan demi produktivitas armada klien.</p>
             </div>
           </div>
         </div>
@@ -255,17 +272,17 @@
       <section class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Mission & Vision</p>
-            <h2>Membangun kepercayaan melalui skema pembiayaan yang transparan dan berkelanjutan.</h2>
+            <p class="section-label" data-i18n="mission_label">Mission & Vision</p>
+            <h2 data-i18n="mission_h2">Membangun kepercayaan melalui skema pembiayaan yang transparan dan berkelanjutan.</h2>
           </div>
           <div class="mission-grid">
             <div class="mission-card reveal">
-              <h3>Vision</h3>
-              <p>Menjadi mitra leasing dan pembiayaan armada kendaraan yang paling dipercaya oleh korporasi di Indonesia.</p>
+              <h3 data-i18n="vision_title">Vision</h3>
+              <p data-i18n="vision_text">Menjadi mitra leasing dan pembiayaan armada kendaraan yang paling dipercaya oleh korporasi di Indonesia.</p>
             </div>
             <div class="mission-card reveal">
-              <h3>Mission</h3>
-              <p>Menghadirkan solusi operating lease dan pembiayaan kendaraan yang efisien, transparan, dan mendukung produktivitas bisnis pelanggan.</p>
+              <h3 data-i18n="mission_title">Mission</h3>
+              <p data-i18n="mission_text">Menghadirkan solusi operating lease dan pembiayaan kendaraan yang efisien, transparan, dan mendukung produktivitas bisnis pelanggan.</p>
             </div>
           </div>
         </div>
@@ -274,21 +291,21 @@
       <section class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Why It Matters</p>
-            <h2>Komitmen kami tercermin dari transparansi skema dan hubungan yang terus berkembang dengan klien korporat.</h2>
+            <p class="section-label" data-i18n="why_label">Why It Matters</p>
+            <h2 data-i18n="why_h2">Komitmen kami tercermin dari transparansi skema dan hubungan yang terus berkembang dengan klien korporat.</h2>
           </div>
           <div class="achievement-grid">
             <div class="achievement-card reveal">
-              <strong>Fleksibel</strong>
-              <span>Skema Tenor & Pembiayaan</span>
+              <strong data-i18n="ach1_title">Fleksibel</strong>
+              <span data-i18n="ach1_text">Skema Tenor & Pembiayaan</span>
             </div>
             <div class="achievement-card reveal">
-              <strong>Transparan</strong>
-              <span>Proses Pengajuan & Persetujuan</span>
+              <strong data-i18n="ach2_title">Transparan</strong>
+              <span data-i18n="ach2_text">Proses Pengajuan & Persetujuan</span>
             </div>
             <div class="achievement-card reveal">
-              <strong>24/7</strong>
-              <span>Dukungan Layanan Armada</span>
+              <strong data-i18n="ach3_title">24/7</strong>
+              <span data-i18n="ach3_text">Dukungan Layanan Armada</span>
             </div>
           </div>
         </div>
@@ -297,27 +314,27 @@
       <section class="section section-alt">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Trusted by</p>
-            <h2>Menjaga kualitas layanan yang dipercaya oleh berbagai mitra bisnis.</h2>
+            <p class="section-label" data-i18n="trusted_label">Trusted by</p>
+            <h2 data-i18n="trusted_h2">Menjaga kualitas layanan yang dipercaya oleh berbagai mitra bisnis.</h2>
           </div>
           <div class="partner-grid reveal">
-            <div class="partner-pill">Corporate Fleet Client</div>
-            <div class="partner-pill">Institutional Lessee</div>
-            <div class="partner-pill">Strategic Financing Partner</div>
-            <div class="partner-pill">Long-Term Corporate Client</div>
+            <div class="partner-pill" data-i18n="partner1">Corporate Fleet Client</div>
+            <div class="partner-pill" data-i18n="partner2">Institutional Lessee</div>
+            <div class="partner-pill" data-i18n="partner3">Strategic Financing Partner</div>
+            <div class="partner-pill" data-i18n="partner4">Long-Term Corporate Client</div>
           </div>
           <div class="section-heading reveal" style="margin-top: 2rem;">
-            <p class="section-label">Testimonials</p>
-            <h2>Klien korporat yang menghargai transparansi, keandalan, dan kecepatan proses dalam setiap kolaborasi.</h2>
+            <p class="section-label" data-i18n="testimonials_label">Testimonials</p>
+            <h2 data-i18n="testimonials_h2">Klien korporat yang menghargai transparansi, keandalan, dan kecepatan proses dalam setiap kolaborasi.</h2>
           </div>
           <div class="testimonial-grid">
             <article class="testimonial-card reveal">
-              <p>“Proses pengajuan leasing armada kami berjalan cepat dan transparan, sangat membantu operasional perusahaan.”</p>
-              <strong>— Corporate Client</strong>
+              <p data-i18n="testimonial1_text">“Proses pengajuan leasing armada kami berjalan cepat dan transparan, sangat membantu operasional perusahaan.”</p>
+              <strong data-i18n="testimonial1_author">— Corporate Client</strong>
             </article>
             <article class="testimonial-card reveal">
-              <p>“Dukungan maintenance dan penggantian unit sangat responsif, meringankan beban pengelolaan armada kami.”</p>
-              <strong>— Fleet Partner</strong>
+              <p data-i18n="testimonial2_text">“Dukungan maintenance dan penggantian unit sangat responsif, meringankan beban pengelolaan armada kami.”</p>
+              <strong data-i18n="testimonial2_author">— Fleet Partner</strong>
             </article>
           </div>
         </div>
@@ -326,24 +343,24 @@
       <section id="solutions" class="section section-alt">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Solutions</p>
-            <h2>Solusi kami yang berfokus pada fleksibilitas, transparansi, dan hasil yang nyata bagi armada Anda.</h2>
+            <p class="section-label" data-i18n="solutions_label">Solutions</p>
+            <h2 data-i18n="solutions_h2">Solusi kami yang berfokus pada fleksibilitas, transparansi, dan hasil yang nyata bagi armada Anda.</h2>
           </div>
           <div class="project-grid">
             <article class="project-card reveal">
               <div class="project-icon">▣</div>
-              <h3>Operating Lease Armada Korporat</h3>
-              <p>Solusi sewa kendaraan operasional jangka panjang tanpa beban kepemilikan aset.</p>
+              <h3 data-i18n="sol1_title">Operating Lease Armada Korporat</h3>
+              <p data-i18n="sol1_text">Solusi sewa kendaraan operasional jangka panjang tanpa beban kepemilikan aset.</p>
             </article>
             <article class="project-card reveal">
               <div class="project-icon">◧</div>
-              <h3>Pembiayaan Kendaraan Dinas</h3>
-              <p>Skema pembiayaan pembelian kendaraan operasional dengan tenor yang fleksibel.</p>
+              <h3 data-i18n="sol2_title">Pembiayaan Kendaraan Dinas</h3>
+              <p data-i18n="sol2_text">Skema pembiayaan pembelian kendaraan operasional dengan tenor yang fleksibel.</p>
             </article>
             <article class="project-card reveal">
               <div class="project-icon">⬢</div>
-              <h3>Manajemen Armada Terintegrasi</h3>
-              <p>Dukungan pengelolaan armada mencakup maintenance dan monitoring berkelanjutan.</p>
+              <h3 data-i18n="sol3_title">Manajemen Armada Terintegrasi</h3>
+              <p data-i18n="sol3_text">Dukungan pengelolaan armada mencakup maintenance dan monitoring berkelanjutan.</p>
             </article>
           </div>
         </div>
@@ -352,21 +369,21 @@
       <section class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Leadership</p>
-            <h2>Tim yang berkomitmen membawa pendekatan profesional dalam setiap skema pembiayaan.</h2>
+            <p class="section-label" data-i18n="leadership_label">Leadership</p>
+            <h2 data-i18n="leadership_h2">Tim yang berkomitmen membawa pendekatan profesional dalam setiap skema pembiayaan.</h2>
           </div>
           <div class="team-grid">
             <div class="team-card reveal">
-              <h3>Executive Leadership</h3>
-              <p>Mengarahkan strategi bisnis leasing dengan fokus pada kualitas, kepatuhan, dan hubungan jangka panjang.</p>
+              <h3 data-i18n="team1_title">Executive Leadership</h3>
+              <p data-i18n="team1_text">Mengarahkan strategi bisnis leasing dengan fokus pada kualitas, kepatuhan, dan hubungan jangka panjang.</p>
             </div>
             <div class="team-card reveal">
-              <h3>Operational Excellence</h3>
-              <p>Menjaga proses pengajuan dan pengelolaan armada tetap terstruktur, efisien, dan sesuai kebutuhan klien.</p>
+              <h3 data-i18n="team2_title">Operational Excellence</h3>
+              <p data-i18n="team2_text">Menjaga proses pengajuan dan pengelolaan armada tetap terstruktur, efisien, dan sesuai kebutuhan klien.</p>
             </div>
             <div class="team-card reveal">
-              <h3>Client Focus</h3>
-              <p>Memastikan setiap kolaborasi leasing berjalan dengan komunikasi yang jelas dan responsif.</p>
+              <h3 data-i18n="team3_title">Client Focus</h3>
+              <p data-i18n="team3_text">Memastikan setiap kolaborasi leasing berjalan dengan komunikasi yang jelas dan responsif.</p>
             </div>
           </div>
         </div>
@@ -375,34 +392,36 @@
       <section class="section section-alt">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Visual Identity</p>
-            <h2>Menampilkan sisi perusahaan yang lebih nyata melalui suasana kerja dan citra profesional.</h2>
+            <p class="section-label" data-i18n="visual_label">Visual Identity</p>
+            <h2 data-i18n="visual_h2">Menampilkan sisi perusahaan yang lebih nyata melalui suasana kerja dan citra profesional.</h2>
           </div>
           <div class="visual-grid">
             <div class="visual-card reveal">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+                data-i18n-alt="visual1_alt"
                 alt="Tim menangani proses pengajuan leasing bersama"
                 loading="lazy"
                 width="900"
                 height="600"
               />
               <div class="visual-caption">
-                <h3>Tim Pembiayaan yang Responsif</h3>
-                <p>Kolaborasi yang terstruktur dalam setiap proses pengajuan dan approval.</p>
+                <h3 data-i18n="visual1_title">Tim Pembiayaan yang Responsif</h3>
+                <p data-i18n="visual1_text">Kolaborasi yang terstruktur dalam setiap proses pengajuan dan approval.</p>
               </div>
             </div>
             <div class="visual-card reveal">
               <img
                 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80"
+                data-i18n-alt="visual2_alt"
                 alt="Kantor korporat modern PT Takari Kokoh Sejahtera"
                 loading="lazy"
                 width="900"
                 height="600"
               />
               <div class="visual-caption">
-                <h3>Kantor Layanan Korporat</h3>
-                <p>Lingkungan kerja yang mendukung layanan leasing yang profesional.</p>
+                <h3 data-i18n="visual2_title">Kantor Layanan Korporat</h3>
+                <p data-i18n="visual2_text">Lingkungan kerja yang mendukung layanan leasing yang profesional.</p>
               </div>
             </div>
           </div>
@@ -412,25 +431,25 @@
       <section id="faq" class="section section-alt">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">FAQ</p>
-            <h2>Pertanyaan yang sering diajukan seputar leasing dan pembiayaan armada.</h2>
+            <p class="section-label" data-i18n="faq_label">FAQ</p>
+            <h2 data-i18n="faq_h2">Pertanyaan yang sering diajukan seputar leasing dan pembiayaan armada.</h2>
           </div>
           <div class="faq-list reveal">
             <details class="faq-item">
-              <summary>Apa perbedaan Operating Lease dengan pembiayaan kepemilikan?</summary>
-              <p>Operating lease adalah sewa kendaraan tanpa kepemilikan aset di akhir masa kontrak, sedangkan pembiayaan kepemilikan (financial lease) memungkinkan kendaraan menjadi milik perusahaan setelah tenor selesai.</p>
+              <summary data-i18n="faq1_q">Apa perbedaan Operating Lease dengan pembiayaan kepemilikan?</summary>
+              <p data-i18n="faq1_a">Operating lease adalah sewa kendaraan tanpa kepemilikan aset di akhir masa kontrak, sedangkan pembiayaan kepemilikan (financial lease) memungkinkan kendaraan menjadi milik perusahaan setelah tenor selesai.</p>
             </details>
             <details class="faq-item">
-              <summary>Berapa lama proses pengajuan leasing?</summary>
-              <p>Proses pengajuan dan persetujuan dilakukan melalui evaluasi yang efisien, dengan tim yang responsif untuk mempercepat proses tanpa mengurangi kehati-hatian.</p>
+              <summary data-i18n="faq2_q">Berapa lama proses pengajuan leasing?</summary>
+              <p data-i18n="faq2_a">Proses pengajuan dan persetujuan dilakukan melalui evaluasi yang efisien, dengan tim yang responsif untuk mempercepat proses tanpa mengurangi kehati-hatian.</p>
             </details>
             <details class="faq-item">
-              <summary>Apakah biaya maintenance termasuk dalam skema leasing?</summary>
-              <p>Untuk skema operating lease, biaya perawatan rutin dapat disertakan sesuai kesepakatan, sehingga perusahaan dapat fokus pada operasional inti.</p>
+              <summary data-i18n="faq3_q">Apakah biaya maintenance termasuk dalam skema leasing?</summary>
+              <p data-i18n="faq3_a">Untuk skema operating lease, biaya perawatan rutin dapat disertakan sesuai kesepakatan, sehingga perusahaan dapat fokus pada operasional inti.</p>
             </details>
             <details class="faq-item">
-              <summary>Apakah layanan mencakup kebutuhan armada dalam jumlah besar?</summary>
-              <p>Kami melayani kebutuhan armada korporat baik skala kecil maupun besar, disesuaikan dengan kebutuhan operasional bisnis klien.</p>
+              <summary data-i18n="faq4_q">Apakah layanan mencakup kebutuhan armada dalam jumlah besar?</summary>
+              <p data-i18n="faq4_a">Kami melayani kebutuhan armada korporat baik skala kecil maupun besar, disesuaikan dengan kebutuhan operasional bisnis klien.</p>
             </details>
           </div>
         </div>
@@ -439,11 +458,11 @@
       <section class="section">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Legalitas & Kepatuhan</p>
-            <h2>Beroperasi dengan tata kelola yang transparan dan sesuai regulasi industri pembiayaan.</h2>
+            <p class="section-label" data-i18n="legal_label">Legalitas & Kepatuhan</p>
+            <h2 data-i18n="legal_h2">Beroperasi dengan tata kelola yang transparan dan sesuai regulasi industri pembiayaan.</h2>
           </div>
           <div class="legal-card reveal">
-            <p>
+            <p data-i18n="legal_text">
               Kami berkomitmen menjalankan setiap layanan leasing dan pembiayaan sesuai dengan
               ketentuan perundang-undangan dan regulasi industri jasa keuangan yang berlaku di
               Indonesia, didukung tata kelola perusahaan yang transparan dan akuntabel di setiap
@@ -457,10 +476,10 @@
         <div class="container">
           <div class="cta-banner reveal">
             <div>
-              <p class="section-label">Get in Touch</p>
-              <h2>Siap mengajukan leasing atau pembiayaan armada untuk perusahaan Anda?</h2>
+              <p class="section-label" data-i18n="cta_label">Get in Touch</p>
+              <h2 data-i18n="cta_h2">Siap mengajukan leasing atau pembiayaan armada untuk perusahaan Anda?</h2>
             </div>
-            <a href="#contact" class="btn btn-primary">Hubungi Kami</a>
+            <a href="#contact" class="btn btn-primary" data-i18n="cta_button">Hubungi Kami</a>
           </div>
         </div>
       </section>
@@ -468,26 +487,26 @@
       <section class="section section-alt">
         <div class="container contact-grid">
           <div class="contact-card reveal">
-            <p class="section-label">Contact</p>
-            <h2>Hubungi kami untuk informasi lebih lanjut atau kolaborasi.</h2>
-            <p>
+            <p class="section-label" data-i18n="contact_label">Contact</p>
+            <h2 data-i18n="contact_h2">Hubungi kami untuk informasi lebih lanjut atau kolaborasi.</h2>
+            <p data-i18n="contact_p">
               Kami siap membantu Anda dengan komunikasi yang jelas, responsif, dan profesional.
             </p>
             <div class="contact-details">
               <div>
-                <strong>Alamat</strong>
+                <strong data-i18n="contact_address_label">Alamat</strong>
                 <span>Jl. KH Mas Mansyur No. Kav.33, Karet Tengsin, Jakarta Pusat 10250</span>
               </div>
               <div>
-                <strong>Telepon / WhatsApp</strong>
+                <strong data-i18n="contact_phone_label">Telepon / WhatsApp</strong>
                 <a href="https://wa.me/62895418465500" target="_blank" rel="noopener noreferrer">+62 8954-1846-5500</a>
               </div>
               <div>
-                <strong>Email</strong>
+                <strong data-i18n="contact_email_label">Email</strong>
                 <a href="mailto:info@takari.co.id">info@takari.co.id</a>
               </div>
               <div>
-                <strong>Website</strong>
+                <strong data-i18n="contact_website_label">Website</strong>
                 <a href="https://takari.co.id" target="_blank" rel="noopener noreferrer">takari.co.id</a>
               </div>
             </div>
@@ -495,18 +514,18 @@
 
           <form class="contact-form reveal">
             <label>
-              Nama
-              <input type="text" placeholder="Nama Anda" />
+              <span data-i18n="form_name_label">Nama</span>
+              <input type="text" data-i18n-placeholder="form_name_placeholder" placeholder="Nama Anda" />
             </label>
             <label>
-              Email
-              <input type="email" placeholder="Email Anda" />
+              <span data-i18n="form_email_label">Email</span>
+              <input type="email" data-i18n-placeholder="form_email_placeholder" placeholder="Email Anda" />
             </label>
             <label>
-              Pesan
-              <textarea rows="5" placeholder="Tuliskan pertanyaan atau kebutuhan Anda"></textarea>
+              <span data-i18n="form_message_label">Pesan</span>
+              <textarea rows="5" data-i18n-placeholder="form_message_placeholder" placeholder="Tuliskan pertanyaan atau kebutuhan Anda"></textarea>
             </label>
-            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+            <button type="submit" class="btn btn-primary" data-i18n="form_submit">Kirim Pesan</button>
           </form>
         </div>
       </section>
@@ -514,14 +533,15 @@
       <section class="section section-alt">
         <div class="container">
           <div class="section-heading reveal">
-            <p class="section-label">Our Presence</p>
-            <h2>Lokasi kantor kami dan kemudahan untuk terhubung langsung.</h2>
+            <p class="section-label" data-i18n="presence_label">Our Presence</p>
+            <h2 data-i18n="presence_h2">Lokasi kantor kami dan kemudahan untuk terhubung langsung.</h2>
           </div>
           <div class="map-card reveal">
             <iframe
               src="https://www.google.com/maps?q=PT.+Takari+Kokoh+Sejahtera,+Jl.+KH+Mas+Mansyur+No.+Kav.33,+Jakarta+Pusat&z=15&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              data-i18n-title="map_title"
               title="Lokasi PT Takari Kokoh Sejahtera"
             ></iframe>
           </div>
@@ -534,17 +554,18 @@
         <div>
           <h3>PT. Takari Kokoh Sejahtera</h3>
           <p>Jl. KH Mas Mansyur No. Kav.33, Karet Tengsin, Jakarta Pusat 10250</p>
-          <p>Corporate Vehicle Leasing & Financing</p>
+          <p data-i18n="footer_tagline">Corporate Vehicle Leasing & Financing</p>
         </div>
         <div>
-          <p><strong>Telepon/WA:</strong> +62 8954-1846-5500</p>
-          <p><strong>Website:</strong> takari.co.id</p>
-          <p><strong>Email:</strong> info@takari.co.id</p>
+          <p><strong data-i18n="footer_phone_label">Telepon/WA:</strong> +62 8954-1846-5500</p>
+          <p><strong data-i18n="footer_website_label">Website:</strong> takari.co.id</p>
+          <p><strong data-i18n="footer_email_label">Email:</strong> info@takari.co.id</p>
           <p>© 2026 PT. Takari Kokoh Sejahtera</p>
         </div>
       </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

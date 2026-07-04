@@ -187,6 +187,41 @@ a {
   color: var(--text);
 }
 
+.lang-switch {
+  display: flex;
+  gap: 0.35rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.lang-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.lang-btn:hover {
+  color: var(--text);
+}
+
+.lang-btn.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #04121f;
+}
+
+.lang-switch-mobile {
+  margin-top: 0.5rem;
+}
+
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -866,6 +901,10 @@ a {
 
 @media (max-width: 800px) {
   .nav-links {
+    display: none;
+  }
+
+  .navbar > .lang-switch {
     display: none;
   }
 

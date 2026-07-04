@@ -64,6 +64,72 @@ faqItems.forEach((item) => {
   });
 });
 
+const SUPPORTED_LANGS = ['id', 'en', 'ja'];
+const LANG_STORAGE_KEY = 'takari-lang';
+const langButtons = Array.from(document.querySelectorAll('.lang-btn'));
+const metaDescriptionTag = document.querySelector('meta[name="description"]');
+
+function applyLanguage(lang) {
+  if (!SUPPORTED_LANGS.includes(lang) || typeof translations === 'undefined') {
+    lang = 'id';
+  }
+  const dict = translations[lang] || translations.id;
+
+  document.querySelectorAll('[data-i18n]').forEach((el) => {
+    const key = el.getAttribute('data-i18n');
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    if (dict[key] !== undefined) el.setAttribute('placeholder', dict[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-aria]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-aria');
+    if (dict[key] !== undefined) el.setAttribute('aria-label', dict[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-title');
+    if (dict[key] !== undefined) el.setAttribute('title', dict[key]);
+  });
+
+  document.querySelectorAll('[data-i18n-alt]').forEach((el) => {
+    const key = el.getAttribute('data-i18n-alt');
+    if (dict[key] !== undefined) el.setAttribute('alt', dict[key]);
+  });
+
+  if (dict.meta_title) document.title = dict.meta_title;
+  if (dict.meta_description && metaDescriptionTag) {
+    metaDescriptionTag.setAttribute('content', dict.meta_description);
+  }
+
+  document.documentElement.lang = lang;
+
+  langButtons.forEach((btn) => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+
+  try {
+    localStorage.setItem(LANG_STORAGE_KEY, lang);
+  } catch (error) {
+    /* localStorage unavailable, ignore */
+  }
+}
+
+langButtons.forEach((btn) => {
+  btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+});
+
+let savedLang = 'id';
+try {
+  savedLang = localStorage.getItem(LANG_STORAGE_KEY) || 'id';
+} catch (error) {
+  savedLang = 'id';
+}
+applyLanguage(savedLang);
+
 if (backToTop) {
   backToTop.addEventListener('click', (event) => {
     event.preventDefault();

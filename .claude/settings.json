@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w * *)",
+      "Bash(curl -s -A * *)",
+      "Bash(curl -sL -A * *)",
+      "Bash(node -e *)",
+      "Bash(node -c *)",
+      "Bash(ls *)",
+      "Bash(ls)",
+      "Bash(pkill -f *)",
+      "Bash(rm -f *)",
+      "Bash(mkdir -p *)"
+    ]
+  }
+}
